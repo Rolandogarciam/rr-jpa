@@ -17,10 +17,6 @@
       logger.info('Activated Admin View');
     }
 
-    function joderaaa(){
-      return 'holaAA';
-    }
-
     function joder(){
       return 'hola';
     }
