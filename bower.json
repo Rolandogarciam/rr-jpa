@@ -1,7 +1,7 @@
 {
-  "name": "jpa",
+  "name": "ro",
   "version": "0.0.1",
-  "description": "jpa",
+  "description": "roLanding",
   "authors": [],
   "license": "MIT",
   "ignore": [
@@ -27,17 +27,19 @@
     "angular-ui-router": "^0.2.18",
     "toastr": "^2.1.2",
     "angular-animate": "^1.5.3",
-    "angular-bootstrap": "^1.2.5"
+    "angular-bootstrap": "^1.2.5",
+    "kendo-ui": "kendo-ui-core#^2017.1.118+Official"
   },
   "resolutions": {
     "angular": "1.5.3"
   },
   "overrides": {
-    "font-awesome": {
+    "kendo-ui": {
       "main": [
-        "less/font-awesome.less"
-      ]
-    },
+	 "styles/kendo.common.core.min.css",
+     "js/kendo.ui.core.min.js"
+       ]
+     },
     "bootstrap": {
       "main": [
         "dist/css/bootstrap.css",

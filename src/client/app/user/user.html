@@ -1,11 +1,75 @@
 <section class="mainbar">
-  <section class="matter">
-    <div class="container">
-      <div class="row">
-        <div>
-         Hello World!
-       </div>
-      </div>
-    </div>
-  </section>
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div id="example">
+                    <div>
+                        <div class="k-content">
+                           <table>
+                               <tr>
+                                   <td>
+                                    <div kendo-draggable k-hint="draggableHint" k-dragstart="onDragStart" k-dragend="onDragEnd" class="k-header draggable">JODER</div>   
+                                    <br />
+                                    <div kendo-droptarget k-dragenter="onDragEnter" k-dragleave="onDragLeave" k-drop="onDrop" class="k-header">{{ vm.dropTargetText }}
+                                    </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                    <div kendo-draggable k-hint="draggableHint" k-dragstart="onDragStart" k-dragend="onDragEnd" class="k-header draggable">JODER</div>   
+                                    <br />
+                                    <div kendo-droptarget k-dragenter="onDragEnter" k-dragleave="onDragLeave" k-drop="onDrop" class="k-header">{{ vm.dropTargetText }}
+                                    </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                    <div kendo-draggable k-hint="draggableHint" k-dragstart="onDragStart" k-dragend="onDragEnd" class="k-header draggable">JODER</div>   
+                                    <br />
+                                    <div kendo-droptarget k-dragenter="onDragEnter" k-dragleave="onDragLeave" k-drop="onDrop" class="k-header">{{ vm.dropTargetText }}
+                                    </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                    <div kendo-draggable k-hint="draggableHint" k-dragstart="onDragStart" k-dragend="onDragEnd" class="k-header draggable">JODER</div>   
+                                    <br />
+                                    <div kendo-droptarget k-dragenter="onDragEnter" k-dragleave="onDragLeave" k-drop="onDrop" class="k-header">{{ vm.dropTargetText }}
+                                    </div>
+                                   </td>
+                               </tr>
+                           </table>
+                        </div>
+                    </div>
+                    <style>
+                        #draggable {
+                            cursor: move;
+                        }
+                        
+                        .painted {
+                            background-color: #03a9f4;
+                            color: #fff;
+                        }
+                        
+                        #draggable.hollow {
+                            cursor: move;
+                        }
+                        
+                        #droptarget {
+                            background-color: black;
+                            height: 200px;
+                            width: 200px;
+                            font-size: 14px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 200px;
+                            margin: 0 auto;
+                            cursor: default;
+                            border: 1px solid #999;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>

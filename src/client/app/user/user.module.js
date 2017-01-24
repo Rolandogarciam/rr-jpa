@@ -3,7 +3,8 @@
 
   angular.module('app.user', [
     'app.core',
-    'app.widgets'
+    'app.widgets',
+    'kendo.directives'
   ]);
 
 })();
