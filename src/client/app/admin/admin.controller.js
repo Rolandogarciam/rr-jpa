@@ -16,9 +16,5 @@
     function activate() {
       logger.info('Activated Admin View');
     }
-
-    function joder(){
-      return 'hola';
-    }
   }
 })();

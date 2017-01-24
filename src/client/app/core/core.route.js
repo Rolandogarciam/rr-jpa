@@ -4,9 +4,13 @@
   angular
     .module('app.core')
     .run(appRun);
-
+    
+  appRun.$inject = ['$rootScope', 'routerHelper'];
   /* @ngInject */
-  function appRun(routerHelper) {
+  function appRun($rootScope, routerHelper) {
+    $rootScope.resouces = [];
+    $rootScope.resouces['Dashboard'] = 'Dash';
+    $rootScope.resouces['Admin'] = 'Admin';
     var otherwise = '/404';
     routerHelper.configureStates(getStates(), otherwise);
   }

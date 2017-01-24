@@ -9,6 +9,24 @@ var logger = require('morgan');
 var port = process.env.PORT || 8001;
 var four0four = require('./utils/404')();
 
+var mongoose = require('mongoose');
+var config = require('./config/environment');
+
+mongoose.Promise = global.Promise;
+
+console.log(config.mongo.uri);
+
+var db = mongoose.connect(config.mongo.uri, config.mongo.options );
+
+mongoose.connection.on('error', function(err) {
+  console.error(`MongoDB connection error: ${err}`);
+  process.exit(-1); // eslint-disable-line no-process-exit
+});
+
+/*if(true) {
+  require('./config/seed');
+}*/
+
 var environment = process.env.NODE_ENV;
 
 app.use(favicon(__dirname + '/favicon.ico'));
@@ -31,7 +49,7 @@ switch (environment) {
       four0four.send404(req, res);
     });
     // Any deep link calls should return index.html
-    app.use('/*', express.static('./build/index.html'));
+    app.use('/*', express.static('./build/index.html'));    
     break;
   default:
     console.log('** DEV **');

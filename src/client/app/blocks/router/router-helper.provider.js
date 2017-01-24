@@ -49,7 +49,13 @@
       ///////////////
 
       function configureStates(states, otherwisePath) {
-        states.forEach(function(state) {
+          states.forEach(function(state) {
+          if (state.config.settings !== undefined) {
+            state.config.settings.content = 
+              ($rootScope.resouces[state.config.title] !== undefined) ?
+              state.config.settings.content.replace(state.config.title, $rootScope.resouces[state.config.title]) :
+            state.config.settings.content;
+          }
           state.config.resolve =
             angular.extend(state.config.resolve || {}, config.resolveAlways);
           $stateProvider.state(state.state, state.config);
