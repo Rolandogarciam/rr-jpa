@@ -7,8 +7,6 @@ module.exports = {
             db: {
                 safe: true,
             },
-            user: 'rolandogarciam',
-            pass: 'roly980218'
         }
     },
 
